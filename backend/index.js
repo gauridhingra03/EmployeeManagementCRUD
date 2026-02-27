@@ -81,6 +81,11 @@ app.post("/employees", async (req, res) => {
 });
 
 /* ➤ Get All Employees */
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Employee Management System API");
+});
+
 app.get("/employees", async (req, res) => {
   try {
     const employees = await Employee.find();
